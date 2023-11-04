@@ -9,6 +9,7 @@ package Semaine5.Exercice3_ImplA;
  * --l'attribut isOnGameBoard est inutile ..
  * --en cosmétique : travailler éventuellement sur le print du plateau de jeu avec des  Char unicode () pour des symboles cercle plein , cercle vide.
  *)
+ *
  */
 
 public class GameManage {
