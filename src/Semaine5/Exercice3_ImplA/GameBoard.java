@@ -19,7 +19,6 @@ public class GameBoard {
         throw new IllegalArgumentException("the letter searched doesn't belong to the mapping array");
     }
 
-    //private Case[][] caseMatrix=new Case[8][8];
     private Token[][] caseMatrix;
 
     public GameBoard() { // init of the 64 matrix Case Board
@@ -40,7 +39,6 @@ public class GameBoard {
         int caseX = getXIndexFromLetter(LetterXAdress);
         int caseY = humanYAdress - 1;
         TokenVisibleColor actualColor;
-        //Token tokenToPut = new Token(color, LetterXAdress, humanYAdress);
         Token tokenOnBoard = caseMatrix[caseX][caseY];
         actualColor = tokenOnBoard.getColor();
         switch (actualColor) {
