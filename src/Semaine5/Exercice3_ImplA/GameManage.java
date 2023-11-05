@@ -6,10 +6,9 @@ package Semaine5.Exercice3_ImplA;
  * --renommage plus pertinent  de certains parametres et attributs
  * --ajout de la gestion des exception dans les différentes méthodes
  * --deplacer certaines methodes , tache  dans la classe Token plutot que GameBoard.
- * --l'attribut isOnGameBoard est inutile ..
- * --en cosmétique : travailler éventuellement sur le print du plateau de jeu avec des  Char unicode () pour des symboles cercle plein , cercle vide.
+ * --les attributs de coordonnées dans les jetons ET l'attribut isOnGameBoard sont inutiles ..
+ * --en cosmétique : travailler éventuellement sur le print du plateau de jeu avec des codes Unicode () pour des symboles cercle plein , cercle vide.
  *)
- *
  */
 
 public class GameManage {

@@ -27,9 +27,12 @@ public class GameBoard {
     }
 
     public boolean putNewTokenOnBoard(TokenVisibleColor color, char LetterXAdress, int humanYAdress) { // ajouter le controle de la presence d'un token
-        Token tokenToPut = new Token(color, LetterXAdress, humanYAdress);
         int caseX = getXIndexFromLetter(LetterXAdress);
         int caseY = humanYAdress - 1;
+        if (caseMatrix[caseX][caseY]!=null){
+            throw new IllegalStateException("the token can't be put on a case with already a token");
+        }
+        Token tokenToPut = new Token(color, LetterXAdress, humanYAdress);
         caseMatrix[caseX][caseY] = tokenToPut;
         tokenToPut.setIsOnGameBoard();
         return true;
@@ -61,17 +64,17 @@ public class GameBoard {
     }
 
     public String toString() {
-        String displayMsg;
-        displayMsg = "   a  b  c  d  e  f  g  h";
+        String displayGameState;
+        displayGameState = "   a  b  c  d  e  f  g  h";
         for (int j = 0; j < caseMatrix.length; j++) {
-            displayMsg += "\n";
-            displayMsg += (j + 1) + " ";
+            displayGameState += "\n";
+            displayGameState += (j + 1) + " ";
             for (int i = 0; i < caseMatrix.length; i++) {
-                displayMsg += getCaseContent(i, j);
+                displayGameState += getCaseContent(i, j);
             }
         }
-        displayMsg += "\n";
-        return displayMsg;
+        displayGameState += "\n";
+        return displayGameState;
     }
 
     public String getCaseContent(int x, int y) {
